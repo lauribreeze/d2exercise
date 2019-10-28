@@ -1,0 +1,3102 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="10/22/2019 3:55:41 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="WS1400659"
+  DTS:CreatorName="BC\s1400659"
+  DTS:DTSID="{FB6ED7C7-7736-42ED-8F45-DEB4229A7D0E}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.1301.433"
+  DTS:LocaleID="1035"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="30"
+  DTS:VersionGUID="{009CBDAE-4D42-4F62-89C1-945C7CC0C198}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Agencies]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{5F5D3C02-8323-475A-902A-76BDA9A95583}"
+      DTS:ObjectName="Agencies">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1035"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x0022_"
+          DTS:CodePage="65001"
+          DTS:ConnectionString="C:\Users\s1400659\Desktop\D2\Crime Data import\agencies.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="YEARLY_AGENCY_ID"
+              DTS:DTSID="{2002DF9D-C5FD-4304-A1C5-206D937FB266}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="AGENCY_ID"
+              DTS:DTSID="{9FA58685-E79A-4323-8AF2-E1FDBA7FA618}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DATA_YEAR"
+              DTS:DTSID="{F426CD12-32C0-4035-96A1-95009CAD21BA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ORI"
+              DTS:DTSID="{F919097C-7680-4218-842A-930578BEAC23}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="LEGACY_ORI"
+              DTS:DTSID="{B3235DAB-E6BE-4650-BFBE-CA15E5E66323}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="COVERED_BY_LEGACY_ORI"
+              DTS:DTSID="{4FCCD088-9FCB-4B28-A0AF-33BAB737B78B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DIRECT_CONTRIBUTOR_FLAG"
+              DTS:DTSID="{B5ADF5EA-6508-4F4D-88C5-42BB1A9F40A9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DORMANT_FLAG"
+              DTS:DTSID="{C157959A-9B57-4D9B-B899-7DD8F1267396}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DORMANT_YEAR"
+              DTS:DTSID="{FA8CA55F-E3AA-4F02-A23F-0939FF6148CD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="REPORTING_TYPE"
+              DTS:DTSID="{16D4F108-36AD-4A4D-81EC-38069A6B10F6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="UCR_AGENCY_NAME"
+              DTS:DTSID="{2015A333-FAAA-4692-A477-CCC2266CD76A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="NCIC_AGENCY_NAME"
+              DTS:DTSID="{610B61A4-4FC3-4AFB-AD03-96EC122CD077}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PUB_AGENCY_NAME"
+              DTS:DTSID="{815661C7-F260-4144-ACCB-75FC5D5EFA0A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PUB_AGENCY_UNIT"
+              DTS:DTSID="{D7A44469-7E3B-42C4-989E-5D41FDA876AF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="AGENCY_STATUS"
+              DTS:DTSID="{88DF93E0-0EBF-4A91-9862-628204F4AD30}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="STATE_ID"
+              DTS:DTSID="{A1BCD6B7-D933-4653-BA4F-3C596995C9A5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="STATE_NAME"
+              DTS:DTSID="{30E103E0-62AF-44BF-8645-2EAED04B9D34}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="STATE_ABBR"
+              DTS:DTSID="{082F21FD-A27A-4DE9-B99B-69FBB615BCB4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="STATE_POSTAL_ABBR"
+              DTS:DTSID="{2DEF6FD4-44F6-4B21-B032-51DB7C89D7F0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DIVISION_CODE"
+              DTS:DTSID="{C88F228C-2CD7-4055-A45B-8B357D61C429}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DIVISION_NAME"
+              DTS:DTSID="{ABA86CA9-CA28-4F71-8258-E65AA8E89145}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="REGION_CODE"
+              DTS:DTSID="{36681EB0-4477-4CFE-A82D-C1234A5646D8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="REGION_NAME"
+              DTS:DTSID="{2AB405C2-8D7E-48CA-A5DD-7961C1060AD1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="REGION_DESC"
+              DTS:DTSID="{25CB6B03-9C4C-4512-9619-FAA745A7C5AB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="AGENCY_TYPE_NAME"
+              DTS:DTSID="{F4C60214-5DE1-4E0D-8A57-A7030840D051}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="POPULATION"
+              DTS:DTSID="{71F0DE2E-2198-448E-B4E7-4668D9D20DA8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SUBMITTING_AGENCY_ID"
+              DTS:DTSID="{948E97E8-A439-430E-AB6D-985763BD1C58}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SAI"
+              DTS:DTSID="{6EF2E074-7202-4AF5-B44D-72C0C52AEA2D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SUBMITTING_AGENCY_NAME"
+              DTS:DTSID="{3442085B-6986-4FD6-82DA-1FD36CC03C7E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SUBURBAN_AREA_FLAG"
+              DTS:DTSID="{9FA2719F-F0B3-41D9-BA2D-5E9A2AE73D03}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="POPULATION_GROUP_ID"
+              DTS:DTSID="{E1390A83-6F9C-4C43-8E56-6454B0AF3CE9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="POPULATION_GROUP_CODE"
+              DTS:DTSID="{7E72B992-679F-4C1F-9C72-7C6328F58393}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="POPULATION_GROUP_DESC"
+              DTS:DTSID="{CE4E6F3D-FD50-400C-929A-7BC7B1522035}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PARENT_POP_GROUP_CODE"
+              DTS:DTSID="{D81009F8-25DB-4BF4-83C2-E56F4697F2ED}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PARENT_POP_GROUP_DESC"
+              DTS:DTSID="{6BFCDF91-F201-4073-9CB7-98907EFA105C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="MIP_FLAG"
+              DTS:DTSID="{9F688079-B89F-4796-8C8D-4E707FCC9CE9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="POP_SORT_ORDER"
+              DTS:DTSID="{DC242B4C-D898-4149-B494-1685EAACFDD8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SUMMARY_RAPE_DEF"
+              DTS:DTSID="{2EFA3D2C-C7AB-484F-AF4D-4AF9CCD788DF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PE_REPORTED_FLAG"
+              DTS:DTSID="{0E476DEB-B1BC-448F-BBCD-288C688E87C1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="MALE_OFFICER"
+              DTS:DTSID="{592F885A-5D80-4D02-8995-FF89A609DF14}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="MALE_CIVILIAN"
+              DTS:DTSID="{FF8C1CBC-AABF-48BE-9288-647DDF0E9A1F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PED MALE_OFFICER+PED MALE_CIVILIAN"
+              DTS:DTSID="{52BC2B71-24C3-4828-A6A1-81BEB778705A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="FEMALE_OFFICER"
+              DTS:DTSID="{A48AD3F0-B078-4386-A487-C11294784BBE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="FEMALE_CIVILIAN"
+              DTS:DTSID="{EE7EDE9C-FA6D-4799-9210-FA685303CFCD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PED FEMALE_CIVILIAN+PED FEMALE_OFFICER"
+              DTS:DTSID="{B07205A9-0E56-497E-8D8F-A981B0489FA7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="NIBRS_CERT_DATE"
+              DTS:DTSID="{08CE7356-D7EA-4998-9CCF-D857151E3250}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="NIBRS_START_DATE"
+              DTS:DTSID="{CA835E0F-74FC-4546-9CE7-A5A6E7CDF39A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="NIBRS_LEOKA_START_DATE"
+              DTS:DTSID="{7E65A0E3-3FC6-41F3-869B-E507889085D3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="NIBRS_CT_START_DATE"
+              DTS:DTSID="{824838FE-0DD8-4E83-8278-2B736583C1BE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="NIBRS_MULTI_BIAS_START_DATE"
+              DTS:DTSID="{59D9C49E-DC4B-419C-A567-4FC6DEFFACC2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="NIBRS_OFF_ETH_START_DATE"
+              DTS:DTSID="{C26050FD-1F64-4339-8D1C-CC6945996554}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="COVERED_FLAG"
+              DTS:DTSID="{9FFC95AC-DB93-44C1-A4DC-8BE8DF09F8A3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="COUNTY_NAME"
+              DTS:DTSID="{3E105212-9897-4987-96CC-5ED4431A3738}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="MSA_NAME"
+              DTS:DTSID="{F98562A1-6AF5-4DF5-94F7-4C4DB1E90CD7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PUBLISHABLE_FLAG"
+              DTS:DTSID="{BE52E1FA-3D8E-47A2-96AC-B345CFE1709B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PARTICIPATED"
+              DTS:DTSID="{B4A14D70-4C2F-44E0-8C1D-E1E2D9CE2793}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="NIBRS_PARTICIPATED"
+              DTS:DTSID="{7BD83366-0067-4F39-8534-B9BB7AFCB6FC}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Cache Connection Manager]"
+      DTS:CreationName="CACHE"
+      DTS:DTSID="{07BAB670-6778-4EA7-8C85-2AEBDCB5B7F9}"
+      DTS:ObjectName="Cache Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:UseFile="True"
+          DTS:ConnectionString="C:\Users\s1400659\Desktop\D2\TX\cache1">
+          <DTS:CacheColumns>
+            <DTS:CacheColumn
+              DTS:DataType="3"
+              DTS:IndexPosition="1"
+              DTS:ObjectName="INCIDENT_ID"
+              DTS:DTSID="{8435FCD3-D0EB-4D1E-8534-D6E0875DA010}"
+              DTS:CreationName="" />
+          </DTS:CacheColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{40562F8B-5542-4E17-ACE1-027866C9DD4A}"
+      DTS:ObjectName="Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1035"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x0022_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\s1400659\Desktop\D2\TX\NIBRS_incident.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DATA_YEAR"
+              DTS:DTSID="{623F9F9C-9F93-4829-85BF-A03843092580}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="AGENCY_ID"
+              DTS:DTSID="{5858B38E-5565-4C2E-ABF0-6FEED69E64B7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="INCIDENT_ID"
+              DTS:DTSID="{9DF00791-010D-4D6E-AD5F-CFC67D1C5E3E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="NIBRS_MONTH_ID"
+              DTS:DTSID="{EA243DCC-8083-46BB-8632-2E86F0E1E9A9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CARGO_THEFT_FLAG"
+              DTS:DTSID="{61EAE47D-D3A2-4B01-847D-A75B4512FA35}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SUBMISSION_DATE"
+              DTS:DTSID="{F1559A1E-A03E-44A1-AE2E-056ACB02730E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="INCIDENT_DATE"
+              DTS:DTSID="{E84090DB-5318-48F2-9CF0-77E63521898A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="REPORT_DATE_FLAG"
+              DTS:DTSID="{BA02BAF8-F2B3-404B-A802-39B1C34B2AF9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="INCIDENT_HOUR"
+              DTS:DTSID="{0DA540F4-A1C3-41BB-8C13-9A86D5F9C30F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CLEARED_EXCEPT_ID"
+              DTS:DTSID="{010BA8B7-69B6-4603-A7BE-CDCE1A653E2E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CLEARED_EXCEPT_DATE"
+              DTS:DTSID="{FC38A7FB-7318-4773-B181-A465C48655AB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="INCIDENT_STATUS"
+              DTS:DTSID="{C22BF5E2-4B46-4952-AFAB-70EC88FE9999}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DATA_HOME"
+              DTS:DTSID="{538CC71D-67FA-4784-AD45-3C859E7622A9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ORIG_FORMAT"
+              DTS:DTSID="{95B28DF3-016C-4138-A845-342AA0A5F050}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DID"
+              DTS:DTSID="{9CE6BB09-874E-40B1-A54B-781C28924BB3}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[SSIS Connection Manager for Azure Storage]"
+      DTS:CreationName="AzureStorage"
+      DTS:DTSID="{482165EF-26F3-43FC-9CF2-138B928138DC}"
+      DTS:ObjectName="SSIS Connection Manager for Azure Storage">
+      <DTS:ObjectData>
+        <AzureStorageConnectionManager
+          ConnectionString="ServiceType=AzureBlobFS;AccountName=lauribreeze;DefaultEndpointsProtocol=https;EndpointSuffix=core.windows.net;">
+          <AccountKey
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAVIZ0JK0uQUqvGFjTce4y0wAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAABqez1+yv/ZNqehDflkGXEBAAAAAASAAACgAAAAEAAAADoz0d1mzOOvs06BVS0AtLS4AAAAlCiisc3HuDrT7Zq/by0vgjroW2qIjXYs8Y0qnYRziGO+ageRWpIg1mROFzbfuQylBCFyQQPeeynF9qhwPOs7tXzjoJDQtAMw+YcYmfSgd75kVyiDF8D5coD0gBjt3udYrzEB5RR5JyjfintpQfGRFzApQchZdiNpGYHxs0QwypxoqA63E2Y4rlBFx+YILoZ5IlPBb/FCEc1u9l9pp7Dwi8g0G3OFMRLxrhH1tdu6NHjbajyK4PcDNxQAAACFdl9seQm/iWqFiQ/oFNFKYcofpg</AccountKey>
+        </AzureStorageConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[tcp:laurihasatestserver.database.windows.net,1433.Crime_and_weather_data.laurib1]"
+      DTS:CreationName="ODBC"
+      DTS:DTSID="{96BE4A3D-6A31-4C5F-A685-9975BCDA3260}"
+      DTS:ObjectName="tcp:laurihasatestserver.database.windows.net,1433.Crime_and_weather_data.laurib1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="server=tcp:laurihasatestserver.database.windows.net,1433;uid=laurib;Driver={ODBC Driver 13 for SQL Server};database=Crime_and_weather_data;encrypt=yes;trustservercertificate=no;connection timeout=30;">
+          <DTS:Password
+            DTS:Name="pwd"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAVIZ0JK0uQUqvGFjTce4y0wAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAD0Zi6Rw4DPtqXgTMb3c2L9AAAAAASAAACgAAAAEAAAAAfb+ZEfbqJUs8RGH33Vx7sgAAAA7Y345fabzB0AHYumnURxVpdoaCAyRufxzYOSXmf6mn8UAAAAT4TcOEgXhzBxU1kBqg2Jl8+EXTY</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Weather Flat File Connection]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{ECC7D248-C0AB-41C9-9A3B-61E1AD1E8EFA}"
+      DTS:ObjectName="Weather Flat File Connection">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1035"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="65001"
+          DTS:ConnectionString="C:\Users\s1400659\Desktop\D2\DFV-Daily-Weather-2017.tsv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Date"
+              DTS:DTSID="{DE4750BE-596D-48A3-B8F8-6A8227B0D4DC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TempMax"
+              DTS:DTSID="{DA88F6E3-AA12-49DA-9188-9EC43775BE7D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TempMin"
+              DTS:DTSID="{5547C290-98A9-4357-8A5A-7B524709AC15}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TempAvg"
+              DTS:DTSID="{2F1F9CCF-B92D-45F7-A931-9CF861199EB2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TempDep"
+              DTS:DTSID="{473A9E55-2545-4B9B-8C8C-01A82C93520E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="HDD"
+              DTS:DTSID="{A84764DC-10BD-4575-BF8A-47C6059E65F3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CDD"
+              DTS:DTSID="{7B6C96CA-A311-411E-8A79-BD1C671E1798}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Precipitation"
+              DTS:DTSID="{1B6272C8-838E-4B1D-ABB4-27D7938BAE20}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="NewSnow"
+              DTS:DTSID="{28BA8FB1-8204-4736-8FD0-D1DE18253C68}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SnowDepth"
+              DTS:DTSID="{A9293A88-5B89-4303-BBBC-0A350374FF74}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{7A0FD880-9BD8-4CC8-A9A2-D240A2971FEA}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="ImportDestination1">
+      <DTS:VariableValue
+        DTS:DataType="8">Import_Weather_Data</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\DFT to Load Crime data"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{C040A190-C40B-4A52-9160-D4B5576AFA90}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="DFT to Load Crime data"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\DFT to Load Crime data\incidents destination"
+              componentClassID="Attunity.SSISODBCDst"
+              description="ODBC Destination"
+              name="incidents destination"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="The name of the table to be fetched."
+                  expressionType="Notify"
+                  name="TableName">"dbo"."Incidents"</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specify the number of rows fetched per batch."
+                  expressionType="Notify"
+                  name="BatchSize">1000</property>
+                <property
+                  dataType="System.Int32"
+                  description="The number of rows inserted under the same transaction."
+                  expressionType="Notify"
+                  name="TransactionSize">1000</property>
+                <property
+                  dataType="System.Int32"
+                  description="Determines the chunk size allocation for LOB columns"
+                  expressionType="Notify"
+                  name="LobChunkSize">32768</property>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds to wait for an SQL statement to execute before returning to the application."
+                  expressionType="Notify"
+                  name="StatementTimeout">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="The code page to use when code page information is unavailable from the data source."
+                  expressionType="Notify"
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Int32"
+                  description="The method used for inserting data. Possible values are 'Batch' or 'Row by row'."
+                  expressionType="Notify"
+                  name="InsertMethod">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="The ODBC C data type for binding numeric data."
+                  expressionType="Notify"
+                  name="BindNumericAs">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Determines how the component would bind columns of (multi)-byte string types (i.e., SQL_CHAR, SQL_VARCHAR, SQL_LONGVARCHAR). The options are: Unicode (SQL_C_WCHAR) and ANSI (SQL_C_CHAR)."
+                  expressionType="Notify"
+                  name="BindCharColumnsAs">0</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT to Load Crime data\incidents destination.Connections[ODBCConnection]"
+                  connectionManagerID="Package.ConnectionManagers[tcp:laurihasatestserver.database.windows.net,1433.Crime_and_weather_data.laurib1]"
+                  connectionManagerRefId="Package.ConnectionManagers[tcp:laurihasatestserver.database.windows.net,1433.Crime_and_weather_data.laurib1]"
+                  description="The ODBC runtime connection used to access the database."
+                  name="ODBCConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DFT to Load Crime data\incidents destination.Inputs[ODBC Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="ODBC Destination Input"
+                  truncationRowDisposition="FailComponent">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT to Load Crime data\incidents destination.Inputs[ODBC Destination Input].Columns[DATA_YEAR]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="DATA_YEAR"
+                      externalMetadataColumnId="Package\DFT to Load Crime data\incidents destination.Inputs[ODBC Destination Input].ExternalColumns[DATA_YEAR]"
+                      lineageId="Package\DFT to Load Crime data\Incidents flat file.Outputs[Flat File Source Output].Columns[DATA_YEAR]" />
+                    <inputColumn
+                      refId="Package\DFT to Load Crime data\incidents destination.Inputs[ODBC Destination Input].Columns[AGENCY_ID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="AGENCY_ID"
+                      externalMetadataColumnId="Package\DFT to Load Crime data\incidents destination.Inputs[ODBC Destination Input].ExternalColumns[AGENCY_ID]"
+                      lineageId="Package\DFT to Load Crime data\Incidents flat file.Outputs[Flat File Source Output].Columns[AGENCY_ID]" />
+                    <inputColumn
+                      refId="Package\DFT to Load Crime data\incidents destination.Inputs[ODBC Destination Input].Columns[INCIDENT_ID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="INCIDENT_ID"
+                      externalMetadataColumnId="Package\DFT to Load Crime data\incidents destination.Inputs[ODBC Destination Input].ExternalColumns[INCIDENT_ID]"
+                      lineageId="Package\DFT to Load Crime data\Incidents flat file.Outputs[Flat File Source Output].Columns[INCIDENT_ID]" />
+                    <inputColumn
+                      refId="Package\DFT to Load Crime data\incidents destination.Inputs[ODBC Destination Input].Columns[NIBRS_MONTH_ID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="NIBRS_MONTH_ID"
+                      externalMetadataColumnId="Package\DFT to Load Crime data\incidents destination.Inputs[ODBC Destination Input].ExternalColumns[NIBRS_MONTH_ID]"
+                      lineageId="Package\DFT to Load Crime data\Incidents flat file.Outputs[Flat File Source Output].Columns[NIBRS_MONTH_ID]" />
+                    <inputColumn
+                      refId="Package\DFT to Load Crime data\incidents destination.Inputs[ODBC Destination Input].Columns[CARGO_THEFT_FLAG]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="CARGO_THEFT_FLAG"
+                      externalMetadataColumnId="Package\DFT to Load Crime data\incidents destination.Inputs[ODBC Destination Input].ExternalColumns[CARGO_THEFT_FLAG]"
+                      lineageId="Package\DFT to Load Crime data\Incidents flat file.Outputs[Flat File Source Output].Columns[CARGO_THEFT_FLAG]" />
+                    <inputColumn
+                      refId="Package\DFT to Load Crime data\incidents destination.Inputs[ODBC Destination Input].Columns[SUBMISSION_DATE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="SUBMISSION_DATE"
+                      externalMetadataColumnId="Package\DFT to Load Crime data\incidents destination.Inputs[ODBC Destination Input].ExternalColumns[SUBMISSION_DATE]"
+                      lineageId="Package\DFT to Load Crime data\Incidents flat file.Outputs[Flat File Source Output].Columns[SUBMISSION_DATE]" />
+                    <inputColumn
+                      refId="Package\DFT to Load Crime data\incidents destination.Inputs[ODBC Destination Input].Columns[INCIDENT_DATE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="INCIDENT_DATE"
+                      externalMetadataColumnId="Package\DFT to Load Crime data\incidents destination.Inputs[ODBC Destination Input].ExternalColumns[INCIDENT_DATE]"
+                      lineageId="Package\DFT to Load Crime data\Incidents flat file.Outputs[Flat File Source Output].Columns[INCIDENT_DATE]" />
+                    <inputColumn
+                      refId="Package\DFT to Load Crime data\incidents destination.Inputs[ODBC Destination Input].Columns[REPORT_DATE_FLAG]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="REPORT_DATE_FLAG"
+                      externalMetadataColumnId="Package\DFT to Load Crime data\incidents destination.Inputs[ODBC Destination Input].ExternalColumns[REPORT_DATE_FLAG]"
+                      lineageId="Package\DFT to Load Crime data\Incidents flat file.Outputs[Flat File Source Output].Columns[REPORT_DATE_FLAG]" />
+                    <inputColumn
+                      refId="Package\DFT to Load Crime data\incidents destination.Inputs[ODBC Destination Input].Columns[INCIDENT_HOUR]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="INCIDENT_HOUR"
+                      externalMetadataColumnId="Package\DFT to Load Crime data\incidents destination.Inputs[ODBC Destination Input].ExternalColumns[INCIDENT_HOUR]"
+                      lineageId="Package\DFT to Load Crime data\Incidents flat file.Outputs[Flat File Source Output].Columns[INCIDENT_HOUR]" />
+                    <inputColumn
+                      refId="Package\DFT to Load Crime data\incidents destination.Inputs[ODBC Destination Input].Columns[CLEARED_EXCEPT_ID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="CLEARED_EXCEPT_ID"
+                      externalMetadataColumnId="Package\DFT to Load Crime data\incidents destination.Inputs[ODBC Destination Input].ExternalColumns[CLEARED_EXCEPT_ID]"
+                      lineageId="Package\DFT to Load Crime data\Incidents flat file.Outputs[Flat File Source Output].Columns[CLEARED_EXCEPT_ID]" />
+                    <inputColumn
+                      refId="Package\DFT to Load Crime data\incidents destination.Inputs[ODBC Destination Input].Columns[CLEARED_EXCEPT_DATE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="CLEARED_EXCEPT_DATE"
+                      externalMetadataColumnId="Package\DFT to Load Crime data\incidents destination.Inputs[ODBC Destination Input].ExternalColumns[CLEARED_EXCEPT_DATE]"
+                      lineageId="Package\DFT to Load Crime data\Incidents flat file.Outputs[Flat File Source Output].Columns[CLEARED_EXCEPT_DATE]" />
+                    <inputColumn
+                      refId="Package\DFT to Load Crime data\incidents destination.Inputs[ODBC Destination Input].Columns[INCIDENT_STATUS]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="INCIDENT_STATUS"
+                      externalMetadataColumnId="Package\DFT to Load Crime data\incidents destination.Inputs[ODBC Destination Input].ExternalColumns[INCIDENT_STATUS]"
+                      lineageId="Package\DFT to Load Crime data\Incidents flat file.Outputs[Flat File Source Output].Columns[INCIDENT_STATUS]" />
+                    <inputColumn
+                      refId="Package\DFT to Load Crime data\incidents destination.Inputs[ODBC Destination Input].Columns[DATA_HOME]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="DATA_HOME"
+                      externalMetadataColumnId="Package\DFT to Load Crime data\incidents destination.Inputs[ODBC Destination Input].ExternalColumns[DATA_HOME]"
+                      lineageId="Package\DFT to Load Crime data\Incidents flat file.Outputs[Flat File Source Output].Columns[DATA_HOME]" />
+                    <inputColumn
+                      refId="Package\DFT to Load Crime data\incidents destination.Inputs[ODBC Destination Input].Columns[ORIG_FORMAT]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="ORIG_FORMAT"
+                      externalMetadataColumnId="Package\DFT to Load Crime data\incidents destination.Inputs[ODBC Destination Input].ExternalColumns[ORIG_FORMAT]"
+                      lineageId="Package\DFT to Load Crime data\Incidents flat file.Outputs[Flat File Source Output].Columns[ORIG_FORMAT]" />
+                    <inputColumn
+                      refId="Package\DFT to Load Crime data\incidents destination.Inputs[ODBC Destination Input].Columns[DID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="DID"
+                      externalMetadataColumnId="Package\DFT to Load Crime data\incidents destination.Inputs[ODBC Destination Input].ExternalColumns[DID]"
+                      lineageId="Package\DFT to Load Crime data\Incidents flat file.Outputs[Flat File Source Output].Columns[DID]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT to Load Crime data\incidents destination.Inputs[ODBC Destination Input].ExternalColumns[INCIDENT_ID]"
+                      dataType="i4"
+                      name="INCIDENT_ID" />
+                    <externalMetadataColumn
+                      refId="Package\DFT to Load Crime data\incidents destination.Inputs[ODBC Destination Input].ExternalColumns[DATA_YEAR]"
+                      dataType="wstr"
+                      length="50"
+                      name="DATA_YEAR" />
+                    <externalMetadataColumn
+                      refId="Package\DFT to Load Crime data\incidents destination.Inputs[ODBC Destination Input].ExternalColumns[AGENCY_ID]"
+                      dataType="wstr"
+                      length="50"
+                      name="AGENCY_ID" />
+                    <externalMetadataColumn
+                      refId="Package\DFT to Load Crime data\incidents destination.Inputs[ODBC Destination Input].ExternalColumns[NIBRS_MONTH_ID]"
+                      dataType="wstr"
+                      length="50"
+                      name="NIBRS_MONTH_ID" />
+                    <externalMetadataColumn
+                      refId="Package\DFT to Load Crime data\incidents destination.Inputs[ODBC Destination Input].ExternalColumns[CARGO_THEFT_FLAG]"
+                      dataType="wstr"
+                      length="50"
+                      name="CARGO_THEFT_FLAG" />
+                    <externalMetadataColumn
+                      refId="Package\DFT to Load Crime data\incidents destination.Inputs[ODBC Destination Input].ExternalColumns[SUBMISSION_DATE]"
+                      dataType="dbDate"
+                      name="SUBMISSION_DATE" />
+                    <externalMetadataColumn
+                      refId="Package\DFT to Load Crime data\incidents destination.Inputs[ODBC Destination Input].ExternalColumns[INCIDENT_DATE]"
+                      dataType="dbDate"
+                      name="INCIDENT_DATE" />
+                    <externalMetadataColumn
+                      refId="Package\DFT to Load Crime data\incidents destination.Inputs[ODBC Destination Input].ExternalColumns[REPORT_DATE_FLAG]"
+                      dataType="wstr"
+                      length="50"
+                      name="REPORT_DATE_FLAG" />
+                    <externalMetadataColumn
+                      refId="Package\DFT to Load Crime data\incidents destination.Inputs[ODBC Destination Input].ExternalColumns[INCIDENT_HOUR]"
+                      dataType="wstr"
+                      length="50"
+                      name="INCIDENT_HOUR" />
+                    <externalMetadataColumn
+                      refId="Package\DFT to Load Crime data\incidents destination.Inputs[ODBC Destination Input].ExternalColumns[CLEARED_EXCEPT_ID]"
+                      dataType="wstr"
+                      length="50"
+                      name="CLEARED_EXCEPT_ID" />
+                    <externalMetadataColumn
+                      refId="Package\DFT to Load Crime data\incidents destination.Inputs[ODBC Destination Input].ExternalColumns[CLEARED_EXCEPT_DATE]"
+                      dataType="dbDate"
+                      name="CLEARED_EXCEPT_DATE" />
+                    <externalMetadataColumn
+                      refId="Package\DFT to Load Crime data\incidents destination.Inputs[ODBC Destination Input].ExternalColumns[INCIDENT_STATUS]"
+                      dataType="wstr"
+                      length="50"
+                      name="INCIDENT_STATUS" />
+                    <externalMetadataColumn
+                      refId="Package\DFT to Load Crime data\incidents destination.Inputs[ODBC Destination Input].ExternalColumns[DATA_HOME]"
+                      dataType="wstr"
+                      length="50"
+                      name="DATA_HOME" />
+                    <externalMetadataColumn
+                      refId="Package\DFT to Load Crime data\incidents destination.Inputs[ODBC Destination Input].ExternalColumns[ORIG_FORMAT]"
+                      dataType="wstr"
+                      length="50"
+                      name="ORIG_FORMAT" />
+                    <externalMetadataColumn
+                      refId="Package\DFT to Load Crime data\incidents destination.Inputs[ODBC Destination Input].ExternalColumns[DID]"
+                      dataType="wstr"
+                      length="50"
+                      name="DID" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT to Load Crime data\incidents destination.Outputs[ODBC Destination Error Output]"
+                  isErrorOut="true"
+                  name="ODBC Destination Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT to Load Crime data\incidents destination.Outputs[ODBC Destination Error Output].Columns[INCIDENT_ID]"
+                      dataType="i4"
+                      externalMetadataColumnId="Package\DFT to Load Crime data\incidents destination.Inputs[ODBC Destination Input].ExternalColumns[INCIDENT_ID]"
+                      lineageId="Package\DFT to Load Crime data\incidents destination.Outputs[ODBC Destination Error Output].Columns[INCIDENT_ID]"
+                      name="INCIDENT_ID" />
+                    <outputColumn
+                      refId="Package\DFT to Load Crime data\incidents destination.Outputs[ODBC Destination Error Output].Columns[DATA_YEAR]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\DFT to Load Crime data\incidents destination.Inputs[ODBC Destination Input].ExternalColumns[DATA_YEAR]"
+                      length="50"
+                      lineageId="Package\DFT to Load Crime data\incidents destination.Outputs[ODBC Destination Error Output].Columns[DATA_YEAR]"
+                      name="DATA_YEAR" />
+                    <outputColumn
+                      refId="Package\DFT to Load Crime data\incidents destination.Outputs[ODBC Destination Error Output].Columns[AGENCY_ID]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\DFT to Load Crime data\incidents destination.Inputs[ODBC Destination Input].ExternalColumns[AGENCY_ID]"
+                      length="50"
+                      lineageId="Package\DFT to Load Crime data\incidents destination.Outputs[ODBC Destination Error Output].Columns[AGENCY_ID]"
+                      name="AGENCY_ID" />
+                    <outputColumn
+                      refId="Package\DFT to Load Crime data\incidents destination.Outputs[ODBC Destination Error Output].Columns[NIBRS_MONTH_ID]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\DFT to Load Crime data\incidents destination.Inputs[ODBC Destination Input].ExternalColumns[NIBRS_MONTH_ID]"
+                      length="50"
+                      lineageId="Package\DFT to Load Crime data\incidents destination.Outputs[ODBC Destination Error Output].Columns[NIBRS_MONTH_ID]"
+                      name="NIBRS_MONTH_ID" />
+                    <outputColumn
+                      refId="Package\DFT to Load Crime data\incidents destination.Outputs[ODBC Destination Error Output].Columns[CARGO_THEFT_FLAG]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\DFT to Load Crime data\incidents destination.Inputs[ODBC Destination Input].ExternalColumns[CARGO_THEFT_FLAG]"
+                      length="50"
+                      lineageId="Package\DFT to Load Crime data\incidents destination.Outputs[ODBC Destination Error Output].Columns[CARGO_THEFT_FLAG]"
+                      name="CARGO_THEFT_FLAG" />
+                    <outputColumn
+                      refId="Package\DFT to Load Crime data\incidents destination.Outputs[ODBC Destination Error Output].Columns[SUBMISSION_DATE]"
+                      dataType="dbDate"
+                      externalMetadataColumnId="Package\DFT to Load Crime data\incidents destination.Inputs[ODBC Destination Input].ExternalColumns[SUBMISSION_DATE]"
+                      lineageId="Package\DFT to Load Crime data\incidents destination.Outputs[ODBC Destination Error Output].Columns[SUBMISSION_DATE]"
+                      name="SUBMISSION_DATE" />
+                    <outputColumn
+                      refId="Package\DFT to Load Crime data\incidents destination.Outputs[ODBC Destination Error Output].Columns[INCIDENT_DATE]"
+                      dataType="dbDate"
+                      externalMetadataColumnId="Package\DFT to Load Crime data\incidents destination.Inputs[ODBC Destination Input].ExternalColumns[INCIDENT_DATE]"
+                      lineageId="Package\DFT to Load Crime data\incidents destination.Outputs[ODBC Destination Error Output].Columns[INCIDENT_DATE]"
+                      name="INCIDENT_DATE" />
+                    <outputColumn
+                      refId="Package\DFT to Load Crime data\incidents destination.Outputs[ODBC Destination Error Output].Columns[REPORT_DATE_FLAG]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\DFT to Load Crime data\incidents destination.Inputs[ODBC Destination Input].ExternalColumns[REPORT_DATE_FLAG]"
+                      length="50"
+                      lineageId="Package\DFT to Load Crime data\incidents destination.Outputs[ODBC Destination Error Output].Columns[REPORT_DATE_FLAG]"
+                      name="REPORT_DATE_FLAG" />
+                    <outputColumn
+                      refId="Package\DFT to Load Crime data\incidents destination.Outputs[ODBC Destination Error Output].Columns[INCIDENT_HOUR]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\DFT to Load Crime data\incidents destination.Inputs[ODBC Destination Input].ExternalColumns[INCIDENT_HOUR]"
+                      length="50"
+                      lineageId="Package\DFT to Load Crime data\incidents destination.Outputs[ODBC Destination Error Output].Columns[INCIDENT_HOUR]"
+                      name="INCIDENT_HOUR" />
+                    <outputColumn
+                      refId="Package\DFT to Load Crime data\incidents destination.Outputs[ODBC Destination Error Output].Columns[CLEARED_EXCEPT_ID]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\DFT to Load Crime data\incidents destination.Inputs[ODBC Destination Input].ExternalColumns[CLEARED_EXCEPT_ID]"
+                      length="50"
+                      lineageId="Package\DFT to Load Crime data\incidents destination.Outputs[ODBC Destination Error Output].Columns[CLEARED_EXCEPT_ID]"
+                      name="CLEARED_EXCEPT_ID" />
+                    <outputColumn
+                      refId="Package\DFT to Load Crime data\incidents destination.Outputs[ODBC Destination Error Output].Columns[CLEARED_EXCEPT_DATE]"
+                      dataType="dbDate"
+                      externalMetadataColumnId="Package\DFT to Load Crime data\incidents destination.Inputs[ODBC Destination Input].ExternalColumns[CLEARED_EXCEPT_DATE]"
+                      lineageId="Package\DFT to Load Crime data\incidents destination.Outputs[ODBC Destination Error Output].Columns[CLEARED_EXCEPT_DATE]"
+                      name="CLEARED_EXCEPT_DATE" />
+                    <outputColumn
+                      refId="Package\DFT to Load Crime data\incidents destination.Outputs[ODBC Destination Error Output].Columns[INCIDENT_STATUS]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\DFT to Load Crime data\incidents destination.Inputs[ODBC Destination Input].ExternalColumns[INCIDENT_STATUS]"
+                      length="50"
+                      lineageId="Package\DFT to Load Crime data\incidents destination.Outputs[ODBC Destination Error Output].Columns[INCIDENT_STATUS]"
+                      name="INCIDENT_STATUS" />
+                    <outputColumn
+                      refId="Package\DFT to Load Crime data\incidents destination.Outputs[ODBC Destination Error Output].Columns[DATA_HOME]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\DFT to Load Crime data\incidents destination.Inputs[ODBC Destination Input].ExternalColumns[DATA_HOME]"
+                      length="50"
+                      lineageId="Package\DFT to Load Crime data\incidents destination.Outputs[ODBC Destination Error Output].Columns[DATA_HOME]"
+                      name="DATA_HOME" />
+                    <outputColumn
+                      refId="Package\DFT to Load Crime data\incidents destination.Outputs[ODBC Destination Error Output].Columns[ORIG_FORMAT]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\DFT to Load Crime data\incidents destination.Inputs[ODBC Destination Input].ExternalColumns[ORIG_FORMAT]"
+                      length="50"
+                      lineageId="Package\DFT to Load Crime data\incidents destination.Outputs[ODBC Destination Error Output].Columns[ORIG_FORMAT]"
+                      name="ORIG_FORMAT" />
+                    <outputColumn
+                      refId="Package\DFT to Load Crime data\incidents destination.Outputs[ODBC Destination Error Output].Columns[DID]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\DFT to Load Crime data\incidents destination.Inputs[ODBC Destination Input].ExternalColumns[DID]"
+                      length="50"
+                      lineageId="Package\DFT to Load Crime data\incidents destination.Outputs[ODBC Destination Error Output].Columns[DID]"
+                      name="DID" />
+                    <outputColumn
+                      refId="Package\DFT to Load Crime data\incidents destination.Outputs[ODBC Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT to Load Crime data\incidents destination.Outputs[ODBC Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT to Load Crime data\incidents destination.Outputs[ODBC Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT to Load Crime data\incidents destination.Outputs[ODBC Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT to Load Crime data\Incidents flat file"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1035"
+              name="Incidents flat file"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT to Load Crime data\Incidents flat file.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\DFT to Load Crime data\Incidents flat file.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT to Load Crime data\Incidents flat file.Outputs[Flat File Source Output].Columns[DATA_YEAR]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT to Load Crime data\Incidents flat file.Outputs[Flat File Source Output].ExternalColumns[DATA_YEAR]"
+                      length="50"
+                      lineageId="Package\DFT to Load Crime data\Incidents flat file.Outputs[Flat File Source Output].Columns[DATA_YEAR]"
+                      name="DATA_YEAR"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT to Load Crime data\Incidents flat file.Outputs[Flat File Source Output].Columns[AGENCY_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT to Load Crime data\Incidents flat file.Outputs[Flat File Source Output].ExternalColumns[AGENCY_ID]"
+                      length="50"
+                      lineageId="Package\DFT to Load Crime data\Incidents flat file.Outputs[Flat File Source Output].Columns[AGENCY_ID]"
+                      name="AGENCY_ID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT to Load Crime data\Incidents flat file.Outputs[Flat File Source Output].Columns[INCIDENT_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT to Load Crime data\Incidents flat file.Outputs[Flat File Source Output].ExternalColumns[INCIDENT_ID]"
+                      length="50"
+                      lineageId="Package\DFT to Load Crime data\Incidents flat file.Outputs[Flat File Source Output].Columns[INCIDENT_ID]"
+                      name="INCIDENT_ID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT to Load Crime data\Incidents flat file.Outputs[Flat File Source Output].Columns[NIBRS_MONTH_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT to Load Crime data\Incidents flat file.Outputs[Flat File Source Output].ExternalColumns[NIBRS_MONTH_ID]"
+                      length="50"
+                      lineageId="Package\DFT to Load Crime data\Incidents flat file.Outputs[Flat File Source Output].Columns[NIBRS_MONTH_ID]"
+                      name="NIBRS_MONTH_ID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT to Load Crime data\Incidents flat file.Outputs[Flat File Source Output].Columns[CARGO_THEFT_FLAG]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT to Load Crime data\Incidents flat file.Outputs[Flat File Source Output].ExternalColumns[CARGO_THEFT_FLAG]"
+                      length="50"
+                      lineageId="Package\DFT to Load Crime data\Incidents flat file.Outputs[Flat File Source Output].Columns[CARGO_THEFT_FLAG]"
+                      name="CARGO_THEFT_FLAG"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT to Load Crime data\Incidents flat file.Outputs[Flat File Source Output].Columns[SUBMISSION_DATE]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT to Load Crime data\Incidents flat file.Outputs[Flat File Source Output].ExternalColumns[SUBMISSION_DATE]"
+                      length="50"
+                      lineageId="Package\DFT to Load Crime data\Incidents flat file.Outputs[Flat File Source Output].Columns[SUBMISSION_DATE]"
+                      name="SUBMISSION_DATE"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT to Load Crime data\Incidents flat file.Outputs[Flat File Source Output].Columns[INCIDENT_DATE]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT to Load Crime data\Incidents flat file.Outputs[Flat File Source Output].ExternalColumns[INCIDENT_DATE]"
+                      length="50"
+                      lineageId="Package\DFT to Load Crime data\Incidents flat file.Outputs[Flat File Source Output].Columns[INCIDENT_DATE]"
+                      name="INCIDENT_DATE"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT to Load Crime data\Incidents flat file.Outputs[Flat File Source Output].Columns[REPORT_DATE_FLAG]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT to Load Crime data\Incidents flat file.Outputs[Flat File Source Output].ExternalColumns[REPORT_DATE_FLAG]"
+                      length="50"
+                      lineageId="Package\DFT to Load Crime data\Incidents flat file.Outputs[Flat File Source Output].Columns[REPORT_DATE_FLAG]"
+                      name="REPORT_DATE_FLAG"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT to Load Crime data\Incidents flat file.Outputs[Flat File Source Output].Columns[INCIDENT_HOUR]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT to Load Crime data\Incidents flat file.Outputs[Flat File Source Output].ExternalColumns[INCIDENT_HOUR]"
+                      length="50"
+                      lineageId="Package\DFT to Load Crime data\Incidents flat file.Outputs[Flat File Source Output].Columns[INCIDENT_HOUR]"
+                      name="INCIDENT_HOUR"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT to Load Crime data\Incidents flat file.Outputs[Flat File Source Output].Columns[CLEARED_EXCEPT_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT to Load Crime data\Incidents flat file.Outputs[Flat File Source Output].ExternalColumns[CLEARED_EXCEPT_ID]"
+                      length="50"
+                      lineageId="Package\DFT to Load Crime data\Incidents flat file.Outputs[Flat File Source Output].Columns[CLEARED_EXCEPT_ID]"
+                      name="CLEARED_EXCEPT_ID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT to Load Crime data\Incidents flat file.Outputs[Flat File Source Output].Columns[CLEARED_EXCEPT_DATE]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT to Load Crime data\Incidents flat file.Outputs[Flat File Source Output].ExternalColumns[CLEARED_EXCEPT_DATE]"
+                      length="50"
+                      lineageId="Package\DFT to Load Crime data\Incidents flat file.Outputs[Flat File Source Output].Columns[CLEARED_EXCEPT_DATE]"
+                      name="CLEARED_EXCEPT_DATE"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT to Load Crime data\Incidents flat file.Outputs[Flat File Source Output].Columns[INCIDENT_STATUS]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT to Load Crime data\Incidents flat file.Outputs[Flat File Source Output].ExternalColumns[INCIDENT_STATUS]"
+                      length="50"
+                      lineageId="Package\DFT to Load Crime data\Incidents flat file.Outputs[Flat File Source Output].Columns[INCIDENT_STATUS]"
+                      name="INCIDENT_STATUS"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT to Load Crime data\Incidents flat file.Outputs[Flat File Source Output].Columns[DATA_HOME]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT to Load Crime data\Incidents flat file.Outputs[Flat File Source Output].ExternalColumns[DATA_HOME]"
+                      length="50"
+                      lineageId="Package\DFT to Load Crime data\Incidents flat file.Outputs[Flat File Source Output].Columns[DATA_HOME]"
+                      name="DATA_HOME"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT to Load Crime data\Incidents flat file.Outputs[Flat File Source Output].Columns[ORIG_FORMAT]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT to Load Crime data\Incidents flat file.Outputs[Flat File Source Output].ExternalColumns[ORIG_FORMAT]"
+                      length="50"
+                      lineageId="Package\DFT to Load Crime data\Incidents flat file.Outputs[Flat File Source Output].Columns[ORIG_FORMAT]"
+                      name="ORIG_FORMAT"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT to Load Crime data\Incidents flat file.Outputs[Flat File Source Output].Columns[DID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT to Load Crime data\Incidents flat file.Outputs[Flat File Source Output].ExternalColumns[DID]"
+                      length="50"
+                      lineageId="Package\DFT to Load Crime data\Incidents flat file.Outputs[Flat File Source Output].Columns[DID]"
+                      name="DID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT to Load Crime data\Incidents flat file.Outputs[Flat File Source Output].ExternalColumns[DATA_YEAR]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="DATA_YEAR" />
+                    <externalMetadataColumn
+                      refId="Package\DFT to Load Crime data\Incidents flat file.Outputs[Flat File Source Output].ExternalColumns[AGENCY_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="AGENCY_ID" />
+                    <externalMetadataColumn
+                      refId="Package\DFT to Load Crime data\Incidents flat file.Outputs[Flat File Source Output].ExternalColumns[INCIDENT_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="INCIDENT_ID" />
+                    <externalMetadataColumn
+                      refId="Package\DFT to Load Crime data\Incidents flat file.Outputs[Flat File Source Output].ExternalColumns[NIBRS_MONTH_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="NIBRS_MONTH_ID" />
+                    <externalMetadataColumn
+                      refId="Package\DFT to Load Crime data\Incidents flat file.Outputs[Flat File Source Output].ExternalColumns[CARGO_THEFT_FLAG]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="CARGO_THEFT_FLAG" />
+                    <externalMetadataColumn
+                      refId="Package\DFT to Load Crime data\Incidents flat file.Outputs[Flat File Source Output].ExternalColumns[SUBMISSION_DATE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="SUBMISSION_DATE" />
+                    <externalMetadataColumn
+                      refId="Package\DFT to Load Crime data\Incidents flat file.Outputs[Flat File Source Output].ExternalColumns[INCIDENT_DATE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="INCIDENT_DATE" />
+                    <externalMetadataColumn
+                      refId="Package\DFT to Load Crime data\Incidents flat file.Outputs[Flat File Source Output].ExternalColumns[REPORT_DATE_FLAG]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="REPORT_DATE_FLAG" />
+                    <externalMetadataColumn
+                      refId="Package\DFT to Load Crime data\Incidents flat file.Outputs[Flat File Source Output].ExternalColumns[INCIDENT_HOUR]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="INCIDENT_HOUR" />
+                    <externalMetadataColumn
+                      refId="Package\DFT to Load Crime data\Incidents flat file.Outputs[Flat File Source Output].ExternalColumns[CLEARED_EXCEPT_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="CLEARED_EXCEPT_ID" />
+                    <externalMetadataColumn
+                      refId="Package\DFT to Load Crime data\Incidents flat file.Outputs[Flat File Source Output].ExternalColumns[CLEARED_EXCEPT_DATE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="CLEARED_EXCEPT_DATE" />
+                    <externalMetadataColumn
+                      refId="Package\DFT to Load Crime data\Incidents flat file.Outputs[Flat File Source Output].ExternalColumns[INCIDENT_STATUS]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="INCIDENT_STATUS" />
+                    <externalMetadataColumn
+                      refId="Package\DFT to Load Crime data\Incidents flat file.Outputs[Flat File Source Output].ExternalColumns[DATA_HOME]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="DATA_HOME" />
+                    <externalMetadataColumn
+                      refId="Package\DFT to Load Crime data\Incidents flat file.Outputs[Flat File Source Output].ExternalColumns[ORIG_FORMAT]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="ORIG_FORMAT" />
+                    <externalMetadataColumn
+                      refId="Package\DFT to Load Crime data\Incidents flat file.Outputs[Flat File Source Output].ExternalColumns[DID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="DID" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\DFT to Load Crime data\Incidents flat file.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT to Load Crime data\Incidents flat file.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\DFT to Load Crime data\Incidents flat file.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\DFT to Load Crime data\Incidents flat file.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT to Load Crime data\Incidents flat file.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT to Load Crime data\Incidents flat file.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT to Load Crime data\Incidents flat file.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT to Load Crime data\Trim data"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Trim data"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\DFT to Load Crime data\Trim data.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT to Load Crime data\Trim data.Inputs[Derived Column Input].Columns[INCIDENT_ID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="INCIDENT_ID"
+                      lineageId="Package\DFT to Load Crime data\Incidents flat file.Outputs[Flat File Source Output].Columns[INCIDENT_ID]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT to Load Crime data\Trim data.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\DFT to Load Crime data\Trim data.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT to Load Crime data\Trim data.Outputs[Derived Column Output].Columns[lookup]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\DFT to Load Crime data\Trim data.Outputs[Derived Column Output].Columns[lookup]"
+                      name="lookup"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_I4)#{Package\DFT to Load Crime data\Incidents flat file.Outputs[Flat File Source Output].Columns[INCIDENT_ID]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_I4)INCIDENT_ID</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT to Load Crime data\Trim data.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\DFT to Load Crime data\Trim data.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT to Load Crime data\Trim data.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT to Load Crime data\Trim data.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT to Load Crime data\Trim data.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT to Load Crime data\Trim data.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\DFT to Load Crime data.Paths[Derived Column Output]"
+              endId="Package\DFT to Load Crime data\incidents destination.Inputs[ODBC Destination Input]"
+              name="Derived Column Output"
+              startId="Package\DFT to Load Crime data\Trim data.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DFT to Load Crime data.Paths[Flat File Source Output]"
+              endId="Package\DFT to Load Crime data\Trim data.Inputs[Derived Column Input]"
+              name="Flat File Source Output"
+              startId="Package\DFT to Load Crime data\Incidents flat file.Outputs[Flat File Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\DFT to Load Weather data"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{C8997B72-78B3-43EE-B511-BE7CE77E66A5}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="DFT to Load Weather data"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\DFT to Load Weather data\ODBC Destination"
+              componentClassID="Attunity.SSISODBCDst"
+              description="ODBC Destination"
+              name="ODBC Destination"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="The name of the table to be fetched."
+                  expressionType="Notify"
+                  name="TableName">"dbo"."Import_Weather_Data"</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specify the number of rows fetched per batch."
+                  expressionType="Notify"
+                  name="BatchSize">1000</property>
+                <property
+                  dataType="System.Int32"
+                  description="The number of rows inserted under the same transaction."
+                  expressionType="Notify"
+                  name="TransactionSize">1000</property>
+                <property
+                  dataType="System.Int32"
+                  description="Determines the chunk size allocation for LOB columns"
+                  expressionType="Notify"
+                  name="LobChunkSize">32768</property>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds to wait for an SQL statement to execute before returning to the application."
+                  expressionType="Notify"
+                  name="StatementTimeout">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="The code page to use when code page information is unavailable from the data source."
+                  expressionType="Notify"
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Int32"
+                  description="The method used for inserting data. Possible values are 'Batch' or 'Row by row'."
+                  expressionType="Notify"
+                  name="InsertMethod">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="The ODBC C data type for binding numeric data."
+                  expressionType="Notify"
+                  name="BindNumericAs">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Determines how the component would bind columns of (multi)-byte string types (i.e., SQL_CHAR, SQL_VARCHAR, SQL_LONGVARCHAR). The options are: Unicode (SQL_C_WCHAR) and ANSI (SQL_C_CHAR)."
+                  expressionType="Notify"
+                  name="BindCharColumnsAs">0</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT to Load Weather data\ODBC Destination.Connections[ODBCConnection]"
+                  connectionManagerID="Package.ConnectionManagers[tcp:laurihasatestserver.database.windows.net,1433.Crime_and_weather_data.laurib1]"
+                  connectionManagerRefId="Package.ConnectionManagers[tcp:laurihasatestserver.database.windows.net,1433.Crime_and_weather_data.laurib1]"
+                  description="The ODBC runtime connection used to access the database."
+                  name="ODBCConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DFT to Load Weather data\ODBC Destination.Inputs[ODBC Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="ODBC Destination Input"
+                  truncationRowDisposition="FailComponent">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT to Load Weather data\ODBC Destination.Inputs[ODBC Destination Input].Columns[TempMax]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="TempMax"
+                      externalMetadataColumnId="Package\DFT to Load Weather data\ODBC Destination.Inputs[ODBC Destination Input].ExternalColumns[TempMax]"
+                      lineageId="Package\DFT to Load Weather data\Weather Data.Outputs[Flat File Source Output].Columns[TempMax]" />
+                    <inputColumn
+                      refId="Package\DFT to Load Weather data\ODBC Destination.Inputs[ODBC Destination Input].Columns[TempMin]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="TempMin"
+                      externalMetadataColumnId="Package\DFT to Load Weather data\ODBC Destination.Inputs[ODBC Destination Input].ExternalColumns[TempMin]"
+                      lineageId="Package\DFT to Load Weather data\Weather Data.Outputs[Flat File Source Output].Columns[TempMin]" />
+                    <inputColumn
+                      refId="Package\DFT to Load Weather data\ODBC Destination.Inputs[ODBC Destination Input].Columns[TempAvg]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="TempAvg"
+                      externalMetadataColumnId="Package\DFT to Load Weather data\ODBC Destination.Inputs[ODBC Destination Input].ExternalColumns[TempAVG]"
+                      lineageId="Package\DFT to Load Weather data\Weather Data.Outputs[Flat File Source Output].Columns[TempAvg]" />
+                    <inputColumn
+                      refId="Package\DFT to Load Weather data\ODBC Destination.Inputs[ODBC Destination Input].Columns[TempDep]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="TempDep"
+                      externalMetadataColumnId="Package\DFT to Load Weather data\ODBC Destination.Inputs[ODBC Destination Input].ExternalColumns[TempDep]"
+                      lineageId="Package\DFT to Load Weather data\Weather Data.Outputs[Flat File Source Output].Columns[TempDep]" />
+                    <inputColumn
+                      refId="Package\DFT to Load Weather data\ODBC Destination.Inputs[ODBC Destination Input].Columns[HDD]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="HDD"
+                      externalMetadataColumnId="Package\DFT to Load Weather data\ODBC Destination.Inputs[ODBC Destination Input].ExternalColumns[HDD]"
+                      lineageId="Package\DFT to Load Weather data\Weather Data.Outputs[Flat File Source Output].Columns[HDD]" />
+                    <inputColumn
+                      refId="Package\DFT to Load Weather data\ODBC Destination.Inputs[ODBC Destination Input].Columns[CDD]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="CDD"
+                      externalMetadataColumnId="Package\DFT to Load Weather data\ODBC Destination.Inputs[ODBC Destination Input].ExternalColumns[CDD]"
+                      lineageId="Package\DFT to Load Weather data\Weather Data.Outputs[Flat File Source Output].Columns[CDD]" />
+                    <inputColumn
+                      refId="Package\DFT to Load Weather data\ODBC Destination.Inputs[ODBC Destination Input].Columns[Precipitation]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Precipitation"
+                      externalMetadataColumnId="Package\DFT to Load Weather data\ODBC Destination.Inputs[ODBC Destination Input].ExternalColumns[Precipitation]"
+                      lineageId="Package\DFT to Load Weather data\Weather Data.Outputs[Flat File Source Output].Columns[Precipitation]" />
+                    <inputColumn
+                      refId="Package\DFT to Load Weather data\ODBC Destination.Inputs[ODBC Destination Input].Columns[NewSnow]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="NewSnow"
+                      externalMetadataColumnId="Package\DFT to Load Weather data\ODBC Destination.Inputs[ODBC Destination Input].ExternalColumns[NewSnow]"
+                      lineageId="Package\DFT to Load Weather data\Weather Data.Outputs[Flat File Source Output].Columns[NewSnow]" />
+                    <inputColumn
+                      refId="Package\DFT to Load Weather data\ODBC Destination.Inputs[ODBC Destination Input].Columns[SnowDepth]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="SnowDepth"
+                      externalMetadataColumnId="Package\DFT to Load Weather data\ODBC Destination.Inputs[ODBC Destination Input].ExternalColumns[SnowDepth]"
+                      lineageId="Package\DFT to Load Weather data\Weather Data.Outputs[Flat File Source Output].Columns[SnowDepth]" />
+                    <inputColumn
+                      refId="Package\DFT to Load Weather data\ODBC Destination.Inputs[ODBC Destination Input].Columns[Date]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Date"
+                      externalMetadataColumnId="Package\DFT to Load Weather data\ODBC Destination.Inputs[ODBC Destination Input].ExternalColumns[Date]"
+                      lineageId="Package\DFT to Load Weather data\Weather Data.Outputs[Flat File Source Output].Columns[Date]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT to Load Weather data\ODBC Destination.Inputs[ODBC Destination Input].ExternalColumns[Date]"
+                      dataType="dbDate"
+                      name="Date" />
+                    <externalMetadataColumn
+                      refId="Package\DFT to Load Weather data\ODBC Destination.Inputs[ODBC Destination Input].ExternalColumns[TempMax]"
+                      dataType="i4"
+                      name="TempMax" />
+                    <externalMetadataColumn
+                      refId="Package\DFT to Load Weather data\ODBC Destination.Inputs[ODBC Destination Input].ExternalColumns[TempMin]"
+                      dataType="i4"
+                      name="TempMin" />
+                    <externalMetadataColumn
+                      refId="Package\DFT to Load Weather data\ODBC Destination.Inputs[ODBC Destination Input].ExternalColumns[TempAVG]"
+                      dataType="numeric"
+                      name="TempAVG"
+                      precision="18"
+                      scale="1" />
+                    <externalMetadataColumn
+                      refId="Package\DFT to Load Weather data\ODBC Destination.Inputs[ODBC Destination Input].ExternalColumns[TempDep]"
+                      dataType="numeric"
+                      name="TempDep"
+                      precision="18"
+                      scale="1" />
+                    <externalMetadataColumn
+                      refId="Package\DFT to Load Weather data\ODBC Destination.Inputs[ODBC Destination Input].ExternalColumns[HDD]"
+                      dataType="numeric"
+                      name="HDD"
+                      precision="18"
+                      scale="1" />
+                    <externalMetadataColumn
+                      refId="Package\DFT to Load Weather data\ODBC Destination.Inputs[ODBC Destination Input].ExternalColumns[CDD]"
+                      dataType="numeric"
+                      name="CDD"
+                      precision="18"
+                      scale="1" />
+                    <externalMetadataColumn
+                      refId="Package\DFT to Load Weather data\ODBC Destination.Inputs[ODBC Destination Input].ExternalColumns[Precipitation]"
+                      dataType="wstr"
+                      length="50"
+                      name="Precipitation" />
+                    <externalMetadataColumn
+                      refId="Package\DFT to Load Weather data\ODBC Destination.Inputs[ODBC Destination Input].ExternalColumns[NewSnow]"
+                      dataType="numeric"
+                      name="NewSnow"
+                      precision="18"
+                      scale="1" />
+                    <externalMetadataColumn
+                      refId="Package\DFT to Load Weather data\ODBC Destination.Inputs[ODBC Destination Input].ExternalColumns[SnowDepth]"
+                      dataType="wstr"
+                      length="1"
+                      name="SnowDepth" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT to Load Weather data\ODBC Destination.Outputs[ODBC Destination Error Output]"
+                  isErrorOut="true"
+                  name="ODBC Destination Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT to Load Weather data\ODBC Destination.Outputs[ODBC Destination Error Output].Columns[Date]"
+                      dataType="dbDate"
+                      externalMetadataColumnId="Package\DFT to Load Weather data\ODBC Destination.Inputs[ODBC Destination Input].ExternalColumns[Date]"
+                      lineageId="Package\DFT to Load Weather data\ODBC Destination.Outputs[ODBC Destination Error Output].Columns[Date]"
+                      name="Date" />
+                    <outputColumn
+                      refId="Package\DFT to Load Weather data\ODBC Destination.Outputs[ODBC Destination Error Output].Columns[TempMax]"
+                      dataType="i4"
+                      externalMetadataColumnId="Package\DFT to Load Weather data\ODBC Destination.Inputs[ODBC Destination Input].ExternalColumns[TempMax]"
+                      lineageId="Package\DFT to Load Weather data\ODBC Destination.Outputs[ODBC Destination Error Output].Columns[TempMax]"
+                      name="TempMax" />
+                    <outputColumn
+                      refId="Package\DFT to Load Weather data\ODBC Destination.Outputs[ODBC Destination Error Output].Columns[TempMin]"
+                      dataType="i4"
+                      externalMetadataColumnId="Package\DFT to Load Weather data\ODBC Destination.Inputs[ODBC Destination Input].ExternalColumns[TempMin]"
+                      lineageId="Package\DFT to Load Weather data\ODBC Destination.Outputs[ODBC Destination Error Output].Columns[TempMin]"
+                      name="TempMin" />
+                    <outputColumn
+                      refId="Package\DFT to Load Weather data\ODBC Destination.Outputs[ODBC Destination Error Output].Columns[TempAVG]"
+                      dataType="numeric"
+                      externalMetadataColumnId="Package\DFT to Load Weather data\ODBC Destination.Inputs[ODBC Destination Input].ExternalColumns[TempAVG]"
+                      lineageId="Package\DFT to Load Weather data\ODBC Destination.Outputs[ODBC Destination Error Output].Columns[TempAVG]"
+                      name="TempAVG"
+                      precision="18"
+                      scale="1" />
+                    <outputColumn
+                      refId="Package\DFT to Load Weather data\ODBC Destination.Outputs[ODBC Destination Error Output].Columns[TempDep]"
+                      dataType="numeric"
+                      externalMetadataColumnId="Package\DFT to Load Weather data\ODBC Destination.Inputs[ODBC Destination Input].ExternalColumns[TempDep]"
+                      lineageId="Package\DFT to Load Weather data\ODBC Destination.Outputs[ODBC Destination Error Output].Columns[TempDep]"
+                      name="TempDep"
+                      precision="18"
+                      scale="1" />
+                    <outputColumn
+                      refId="Package\DFT to Load Weather data\ODBC Destination.Outputs[ODBC Destination Error Output].Columns[HDD]"
+                      dataType="numeric"
+                      externalMetadataColumnId="Package\DFT to Load Weather data\ODBC Destination.Inputs[ODBC Destination Input].ExternalColumns[HDD]"
+                      lineageId="Package\DFT to Load Weather data\ODBC Destination.Outputs[ODBC Destination Error Output].Columns[HDD]"
+                      name="HDD"
+                      precision="18"
+                      scale="1" />
+                    <outputColumn
+                      refId="Package\DFT to Load Weather data\ODBC Destination.Outputs[ODBC Destination Error Output].Columns[CDD]"
+                      dataType="numeric"
+                      externalMetadataColumnId="Package\DFT to Load Weather data\ODBC Destination.Inputs[ODBC Destination Input].ExternalColumns[CDD]"
+                      lineageId="Package\DFT to Load Weather data\ODBC Destination.Outputs[ODBC Destination Error Output].Columns[CDD]"
+                      name="CDD"
+                      precision="18"
+                      scale="1" />
+                    <outputColumn
+                      refId="Package\DFT to Load Weather data\ODBC Destination.Outputs[ODBC Destination Error Output].Columns[Precipitation]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\DFT to Load Weather data\ODBC Destination.Inputs[ODBC Destination Input].ExternalColumns[Precipitation]"
+                      length="50"
+                      lineageId="Package\DFT to Load Weather data\ODBC Destination.Outputs[ODBC Destination Error Output].Columns[Precipitation]"
+                      name="Precipitation" />
+                    <outputColumn
+                      refId="Package\DFT to Load Weather data\ODBC Destination.Outputs[ODBC Destination Error Output].Columns[NewSnow]"
+                      dataType="numeric"
+                      externalMetadataColumnId="Package\DFT to Load Weather data\ODBC Destination.Inputs[ODBC Destination Input].ExternalColumns[NewSnow]"
+                      lineageId="Package\DFT to Load Weather data\ODBC Destination.Outputs[ODBC Destination Error Output].Columns[NewSnow]"
+                      name="NewSnow"
+                      precision="18"
+                      scale="1" />
+                    <outputColumn
+                      refId="Package\DFT to Load Weather data\ODBC Destination.Outputs[ODBC Destination Error Output].Columns[SnowDepth]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\DFT to Load Weather data\ODBC Destination.Inputs[ODBC Destination Input].ExternalColumns[SnowDepth]"
+                      length="1"
+                      lineageId="Package\DFT to Load Weather data\ODBC Destination.Outputs[ODBC Destination Error Output].Columns[SnowDepth]"
+                      name="SnowDepth" />
+                    <outputColumn
+                      refId="Package\DFT to Load Weather data\ODBC Destination.Outputs[ODBC Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT to Load Weather data\ODBC Destination.Outputs[ODBC Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT to Load Weather data\ODBC Destination.Outputs[ODBC Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT to Load Weather data\ODBC Destination.Outputs[ODBC Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT to Load Weather data\Trim Columns"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Trim Columns"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\DFT to Load Weather data\Trim Columns.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT to Load Weather data\Trim Columns.Inputs[Derived Column Input].Columns[TempMax]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="TempMax"
+                      lineageId="Package\DFT to Load Weather data\Weather Data.Outputs[Flat File Source Output].Columns[TempMax]" />
+                    <inputColumn
+                      refId="Package\DFT to Load Weather data\Trim Columns.Inputs[Derived Column Input].Columns[TempMin]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="TempMin"
+                      lineageId="Package\DFT to Load Weather data\Weather Data.Outputs[Flat File Source Output].Columns[TempMin]" />
+                    <inputColumn
+                      refId="Package\DFT to Load Weather data\Trim Columns.Inputs[Derived Column Input].Columns[TempAvg]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="TempAvg"
+                      lineageId="Package\DFT to Load Weather data\Weather Data.Outputs[Flat File Source Output].Columns[TempAvg]" />
+                    <inputColumn
+                      refId="Package\DFT to Load Weather data\Trim Columns.Inputs[Derived Column Input].Columns[TempDep]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="TempDep"
+                      lineageId="Package\DFT to Load Weather data\Weather Data.Outputs[Flat File Source Output].Columns[TempDep]" />
+                    <inputColumn
+                      refId="Package\DFT to Load Weather data\Trim Columns.Inputs[Derived Column Input].Columns[HDD]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="HDD"
+                      lineageId="Package\DFT to Load Weather data\Weather Data.Outputs[Flat File Source Output].Columns[HDD]" />
+                    <inputColumn
+                      refId="Package\DFT to Load Weather data\Trim Columns.Inputs[Derived Column Input].Columns[CDD]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="CDD"
+                      lineageId="Package\DFT to Load Weather data\Weather Data.Outputs[Flat File Source Output].Columns[CDD]" />
+                    <inputColumn
+                      refId="Package\DFT to Load Weather data\Trim Columns.Inputs[Derived Column Input].Columns[Precipitation]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Precipitation"
+                      lineageId="Package\DFT to Load Weather data\Weather Data.Outputs[Flat File Source Output].Columns[Precipitation]" />
+                    <inputColumn
+                      refId="Package\DFT to Load Weather data\Trim Columns.Inputs[Derived Column Input].Columns[NewSnow]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="NewSnow"
+                      lineageId="Package\DFT to Load Weather data\Weather Data.Outputs[Flat File Source Output].Columns[NewSnow]" />
+                    <inputColumn
+                      refId="Package\DFT to Load Weather data\Trim Columns.Inputs[Derived Column Input].Columns[SnowDepth]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="SnowDepth"
+                      lineageId="Package\DFT to Load Weather data\Weather Data.Outputs[Flat File Source Output].Columns[SnowDepth]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT to Load Weather data\Trim Columns.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\DFT to Load Weather data\Trim Columns.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT to Load Weather data\Trim Columns.Outputs[Derived Column Output].Columns[SnowDepth_Mod]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\DFT to Load Weather data\Trim Columns.Outputs[Derived Column Output].Columns[SnowDepth_Mod]"
+                      name="SnowDepth_Mod"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[LTRIM]([RTRIM](#{Package\DFT to Load Weather data\Weather Data.Outputs[Flat File Source Output].Columns[SnowDepth]}))</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">LTRIM(RTRIM(SnowDepth))</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT to Load Weather data\Trim Columns.Outputs[Derived Column Output].Columns[NewSnow_Mod]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\DFT to Load Weather data\Trim Columns.Outputs[Derived Column Output].Columns[NewSnow_Mod]"
+                      name="NewSnow_Mod"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[LTRIM]([RTRIM](#{Package\DFT to Load Weather data\Weather Data.Outputs[Flat File Source Output].Columns[NewSnow]}))</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">LTRIM(RTRIM(NewSnow))</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT to Load Weather data\Trim Columns.Outputs[Derived Column Output].Columns[Precipitation_Mod]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\DFT to Load Weather data\Trim Columns.Outputs[Derived Column Output].Columns[Precipitation_Mod]"
+                      name="Precipitation_Mod"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[LTRIM]([RTRIM](#{Package\DFT to Load Weather data\Weather Data.Outputs[Flat File Source Output].Columns[Precipitation]}))</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">LTRIM(RTRIM(Precipitation))</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT to Load Weather data\Trim Columns.Outputs[Derived Column Output].Columns[CDD_Mod]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\DFT to Load Weather data\Trim Columns.Outputs[Derived Column Output].Columns[CDD_Mod]"
+                      name="CDD_Mod"
+                      precision="18"
+                      scale="1"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_NUMERIC,18,1)[LTRIM]([RTRIM](#{Package\DFT to Load Weather data\Weather Data.Outputs[Flat File Source Output].Columns[CDD]}))</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_NUMERIC,18,1)LTRIM(RTRIM(CDD))</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT to Load Weather data\Trim Columns.Outputs[Derived Column Output].Columns[HDD_Mod]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\DFT to Load Weather data\Trim Columns.Outputs[Derived Column Output].Columns[HDD_Mod]"
+                      name="HDD_Mod"
+                      precision="18"
+                      scale="1"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_NUMERIC,18,1)[LTRIM]([RTRIM](#{Package\DFT to Load Weather data\Weather Data.Outputs[Flat File Source Output].Columns[HDD]}))</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_NUMERIC,18,1)LTRIM(RTRIM(HDD))</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT to Load Weather data\Trim Columns.Outputs[Derived Column Output].Columns[TempDep_Mod]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\DFT to Load Weather data\Trim Columns.Outputs[Derived Column Output].Columns[TempDep_Mod]"
+                      name="TempDep_Mod"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[LTRIM]([RTRIM](#{Package\DFT to Load Weather data\Weather Data.Outputs[Flat File Source Output].Columns[TempDep]}))</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">LTRIM(RTRIM(TempDep))</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT to Load Weather data\Trim Columns.Outputs[Derived Column Output].Columns[TempAvg_Mod]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\DFT to Load Weather data\Trim Columns.Outputs[Derived Column Output].Columns[TempAvg_Mod]"
+                      name="TempAvg_Mod"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[LTRIM]([RTRIM](#{Package\DFT to Load Weather data\Weather Data.Outputs[Flat File Source Output].Columns[TempAvg]}))</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">LTRIM(RTRIM(TempAvg))</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT to Load Weather data\Trim Columns.Outputs[Derived Column Output].Columns[TempMin_Mod]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\DFT to Load Weather data\Trim Columns.Outputs[Derived Column Output].Columns[TempMin_Mod]"
+                      name="TempMin_Mod"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_I4)[LTRIM]([RTRIM](#{Package\DFT to Load Weather data\Weather Data.Outputs[Flat File Source Output].Columns[TempMin]}))</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_I4)LTRIM(RTRIM(TempMin))</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT to Load Weather data\Trim Columns.Outputs[Derived Column Output].Columns[TempMax_Mod]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\DFT to Load Weather data\Trim Columns.Outputs[Derived Column Output].Columns[TempMax_Mod]"
+                      name="TempMax_Mod"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_I4)[LTRIM]([RTRIM](#{Package\DFT to Load Weather data\Weather Data.Outputs[Flat File Source Output].Columns[TempMax]}))</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_I4)LTRIM(RTRIM(TempMax))</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT to Load Weather data\Trim Columns.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\DFT to Load Weather data\Trim Columns.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT to Load Weather data\Trim Columns.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT to Load Weather data\Trim Columns.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT to Load Weather data\Trim Columns.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT to Load Weather data\Trim Columns.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT to Load Weather data\Weather Data"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1035"
+              name="Weather Data"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT to Load Weather data\Weather Data.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Weather Flat File Connection]"
+                  connectionManagerRefId="Package.ConnectionManagers[Weather Flat File Connection]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\DFT to Load Weather data\Weather Data.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT to Load Weather data\Weather Data.Outputs[Flat File Source Output].Columns[Date]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT to Load Weather data\Weather Data.Outputs[Flat File Source Output].ExternalColumns[Date]"
+                      length="50"
+                      lineageId="Package\DFT to Load Weather data\Weather Data.Outputs[Flat File Source Output].Columns[Date]"
+                      name="Date"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT to Load Weather data\Weather Data.Outputs[Flat File Source Output].Columns[TempMax]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT to Load Weather data\Weather Data.Outputs[Flat File Source Output].ExternalColumns[TempMax]"
+                      length="50"
+                      lineageId="Package\DFT to Load Weather data\Weather Data.Outputs[Flat File Source Output].Columns[TempMax]"
+                      name="TempMax"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT to Load Weather data\Weather Data.Outputs[Flat File Source Output].Columns[TempMin]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT to Load Weather data\Weather Data.Outputs[Flat File Source Output].ExternalColumns[TempMin]"
+                      length="50"
+                      lineageId="Package\DFT to Load Weather data\Weather Data.Outputs[Flat File Source Output].Columns[TempMin]"
+                      name="TempMin"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT to Load Weather data\Weather Data.Outputs[Flat File Source Output].Columns[TempAvg]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT to Load Weather data\Weather Data.Outputs[Flat File Source Output].ExternalColumns[TempAvg]"
+                      length="50"
+                      lineageId="Package\DFT to Load Weather data\Weather Data.Outputs[Flat File Source Output].Columns[TempAvg]"
+                      name="TempAvg"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT to Load Weather data\Weather Data.Outputs[Flat File Source Output].Columns[TempDep]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT to Load Weather data\Weather Data.Outputs[Flat File Source Output].ExternalColumns[TempDep]"
+                      length="50"
+                      lineageId="Package\DFT to Load Weather data\Weather Data.Outputs[Flat File Source Output].Columns[TempDep]"
+                      name="TempDep"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT to Load Weather data\Weather Data.Outputs[Flat File Source Output].Columns[HDD]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT to Load Weather data\Weather Data.Outputs[Flat File Source Output].ExternalColumns[HDD]"
+                      length="50"
+                      lineageId="Package\DFT to Load Weather data\Weather Data.Outputs[Flat File Source Output].Columns[HDD]"
+                      name="HDD"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT to Load Weather data\Weather Data.Outputs[Flat File Source Output].Columns[CDD]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT to Load Weather data\Weather Data.Outputs[Flat File Source Output].ExternalColumns[CDD]"
+                      length="50"
+                      lineageId="Package\DFT to Load Weather data\Weather Data.Outputs[Flat File Source Output].Columns[CDD]"
+                      name="CDD"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT to Load Weather data\Weather Data.Outputs[Flat File Source Output].Columns[Precipitation]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT to Load Weather data\Weather Data.Outputs[Flat File Source Output].ExternalColumns[Precipitation]"
+                      length="50"
+                      lineageId="Package\DFT to Load Weather data\Weather Data.Outputs[Flat File Source Output].Columns[Precipitation]"
+                      name="Precipitation"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT to Load Weather data\Weather Data.Outputs[Flat File Source Output].Columns[NewSnow]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT to Load Weather data\Weather Data.Outputs[Flat File Source Output].ExternalColumns[NewSnow]"
+                      length="50"
+                      lineageId="Package\DFT to Load Weather data\Weather Data.Outputs[Flat File Source Output].Columns[NewSnow]"
+                      name="NewSnow"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT to Load Weather data\Weather Data.Outputs[Flat File Source Output].Columns[SnowDepth]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT to Load Weather data\Weather Data.Outputs[Flat File Source Output].ExternalColumns[SnowDepth]"
+                      length="50"
+                      lineageId="Package\DFT to Load Weather data\Weather Data.Outputs[Flat File Source Output].Columns[SnowDepth]"
+                      name="SnowDepth"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT to Load Weather data\Weather Data.Outputs[Flat File Source Output].ExternalColumns[Date]"
+                      dataType="wstr"
+                      length="50"
+                      name="Date" />
+                    <externalMetadataColumn
+                      refId="Package\DFT to Load Weather data\Weather Data.Outputs[Flat File Source Output].ExternalColumns[TempMax]"
+                      dataType="wstr"
+                      length="50"
+                      name="TempMax" />
+                    <externalMetadataColumn
+                      refId="Package\DFT to Load Weather data\Weather Data.Outputs[Flat File Source Output].ExternalColumns[TempMin]"
+                      dataType="wstr"
+                      length="50"
+                      name="TempMin" />
+                    <externalMetadataColumn
+                      refId="Package\DFT to Load Weather data\Weather Data.Outputs[Flat File Source Output].ExternalColumns[TempAvg]"
+                      dataType="wstr"
+                      length="50"
+                      name="TempAvg" />
+                    <externalMetadataColumn
+                      refId="Package\DFT to Load Weather data\Weather Data.Outputs[Flat File Source Output].ExternalColumns[TempDep]"
+                      dataType="wstr"
+                      length="50"
+                      name="TempDep" />
+                    <externalMetadataColumn
+                      refId="Package\DFT to Load Weather data\Weather Data.Outputs[Flat File Source Output].ExternalColumns[HDD]"
+                      dataType="wstr"
+                      length="50"
+                      name="HDD" />
+                    <externalMetadataColumn
+                      refId="Package\DFT to Load Weather data\Weather Data.Outputs[Flat File Source Output].ExternalColumns[CDD]"
+                      dataType="wstr"
+                      length="50"
+                      name="CDD" />
+                    <externalMetadataColumn
+                      refId="Package\DFT to Load Weather data\Weather Data.Outputs[Flat File Source Output].ExternalColumns[Precipitation]"
+                      dataType="wstr"
+                      length="50"
+                      name="Precipitation" />
+                    <externalMetadataColumn
+                      refId="Package\DFT to Load Weather data\Weather Data.Outputs[Flat File Source Output].ExternalColumns[NewSnow]"
+                      dataType="wstr"
+                      length="50"
+                      name="NewSnow" />
+                    <externalMetadataColumn
+                      refId="Package\DFT to Load Weather data\Weather Data.Outputs[Flat File Source Output].ExternalColumns[SnowDepth]"
+                      dataType="wstr"
+                      length="50"
+                      name="SnowDepth" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\DFT to Load Weather data\Weather Data.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT to Load Weather data\Weather Data.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="65001"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\DFT to Load Weather data\Weather Data.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\DFT to Load Weather data\Weather Data.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT to Load Weather data\Weather Data.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT to Load Weather data\Weather Data.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT to Load Weather data\Weather Data.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\DFT to Load Weather data.Paths[Derived Column Output]"
+              endId="Package\DFT to Load Weather data\ODBC Destination.Inputs[ODBC Destination Input]"
+              name="Derived Column Output"
+              startId="Package\DFT to Load Weather data\Trim Columns.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DFT to Load Weather data.Paths[Flat File Source Output]"
+              endId="Package\DFT to Load Weather data\Trim Columns.Inputs[Derived Column Input]"
+              name="Flat File Source Output"
+              startId="Package\DFT to Load Weather data\Weather Data.Outputs[Flat File Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{A00B5219-EC7C-4D86-BD01-064A76567EB2}"
+      DTS:From="Package\DFT to Load Weather data"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\DFT to Load Crime data" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="199,42"
+          Id="Package\DFT to Load Crime data"
+          TopLeft="259,193" />
+        <NodeLayout
+          Size="211,42"
+          Id="Package\DFT to Load Weather data"
+          TopLeft="242,83" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="347.5,125">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="11,68"
+              Start="0,0"
+              End="11,60.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,30" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,30"
+                    Point2="0,34"
+                    Point3="4,34" />
+                  <mssgle:LineSegment
+                    End="7,34" />
+                  <mssgle:CubicBezierSegment
+                    Point1="7,34"
+                    Point2="11,34"
+                    Point3="11,38" />
+                  <mssgle:LineSegment
+                    End="11,60.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\DFT to Load Crime data">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="160,42"
+          Id="Package\DFT to Load Crime data\Incidents flat file"
+          TopLeft="237,87" />
+        <NodeLayout
+          Size="127,42"
+          Id="Package\DFT to Load Crime data\Trim data"
+          TopLeft="308,235" />
+        <NodeLayout
+          Size="181,42"
+          Id="Package\DFT to Load Crime data\incidents destination"
+          TopLeft="341,378" />
+        <EdgeLayout
+          Id="Package\DFT to Load Crime data.Paths[Flat File Source Output]"
+          TopLeft="317,129">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="54.5,106"
+              Start="0,0"
+              End="54.5,98.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,49" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,49"
+                    Point2="0,53"
+                    Point3="4,53" />
+                  <mssgle:LineSegment
+                    End="50.5,53" />
+                  <mssgle:CubicBezierSegment
+                    Point1="50.5,53"
+                    Point2="54.5,53"
+                    Point3="54.5,57" />
+                  <mssgle:LineSegment
+                    End="54.5,98.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT to Load Crime data.Paths[Derived Column Output]"
+          TopLeft="371.5,277">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="60,101"
+              Start="0,0"
+              End="60,93.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,46.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,46.5"
+                    Point2="0,50.5"
+                    Point3="4,50.5" />
+                  <mssgle:LineSegment
+                    End="56,50.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="56,50.5"
+                    Point2="60,50.5"
+                    Point3="60,54.5" />
+                  <mssgle:LineSegment
+                    End="60,93.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT to Load Crime data\incidents destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\DFT to Load Weather data">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="149,42"
+          Id="Package\DFT to Load Weather data\Trim Columns"
+          TopLeft="272,251" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\DFT to Load Weather data\ODBC Destination"
+          TopLeft="317,438" />
+        <NodeLayout
+          Size="149,42"
+          Id="Package\DFT to Load Weather data\Weather Data"
+          TopLeft="168,89" />
+        <EdgeLayout
+          Id="Package\DFT to Load Weather data.Paths[Flat File Source Output]"
+          TopLeft="242.5,131">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="104,120"
+              Start="0,0"
+              End="104,112.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,56" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,56"
+                    Point2="0,60"
+                    Point3="4,60" />
+                  <mssgle:LineSegment
+                    End="100,60" />
+                  <mssgle:CubicBezierSegment
+                    Point1="100,60"
+                    Point2="104,60"
+                    Point3="104,64" />
+                  <mssgle:LineSegment
+                    End="104,112.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT to Load Weather data.Paths[Derived Column Output]"
+          TopLeft="346.5,293">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="56,145"
+              Start="0,0"
+              End="56,137.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,68.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,68.5"
+                    Point2="0,72.5"
+                    Point3="4,72.5" />
+                  <mssgle:LineSegment
+                    End="52,72.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="52,72.5"
+                    Point2="56,72.5"
+                    Point3="56,76.5" />
+                  <mssgle:LineSegment
+                    End="56,137.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT to Load Weather data\ODBC Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
